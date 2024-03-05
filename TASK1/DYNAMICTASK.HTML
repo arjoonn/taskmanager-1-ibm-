@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="to-do.js"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <!-- Bootstrap - Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- My styles CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper" ng-controller="TodoListController as todoList">
+ 
+      <div class="wrapper2">
+        <div class="head">  
+          <span id="jsn" class="fa fa-thumb-tack fa-2x"></span>
+          <span>{{todoList.remaining()}} of {{todoList.todos.length}} Remaining</span>
+        </div>  
+        <a class="btn btn-primary btn-xs" href="" ng-click="todoList.clear()" role="button">Clear completed tasks</a> 
+        <h2>To do List</h2>
+        <br> 
+        <ul class="unstyled">
+          <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox">
+              <input class="check" type="checkbox" ng-model="todo.done">
+              <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </label>
+          </li>
+        </ul>
+ 
+        <form ng-submit="todoList.addTodo()">
+          <input class="form-control" type="text" ng-model="todoList.todoText" ng-minlenght="1" required size="10" placeholder="Add new task here">
+          <input class="btn btn-primary btn-sm" type="submit" value="Add task">
+        </form>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+html{
+  height: 100%;
+}
+ 
+body{
+ background-color: rgb(44,62,80);
+  background-image: url("img/bg-jsn.jpg");
+  background-poFlower', sition: center;
+  font-family:sans-serif;
+  font-size: 18px;
+}
+ 
+h2{
+  font-family:calibri;
+  text-align: center;
+  color: #286090;  
+}
+ 
+.wrapper{
+  background-image: url("img/notebook.jpg");
+  background-color: black;
+  position: absolute;
+  left: 0;
+  right: 30%;
+  top: 50px;
+  padding: 20px;
+  margin: auto;
+  width: 420px;
+  border-top-right-radius: 2%;
+  border-bottom-right-radius: 2%;
+}
+ 
+.wrapper2{
+  padding-top: 10px;
+  padding-left: 50px;
+}
+ 
+.form-control{
+  width: 100%;
+  font-size: 14px;
+}
+ 
+.fa.fa-thumb-tack.fa-2x{
+  color : #337ab7;
+}
+ 
+.btn.btn-primary.btn-sm{
+  margin-top: 5px;
+  width: 100%;
+  background-color: transparent;
+  color: #286090;  
+  font-size: 14px;
+ } 
+ 
+.btn.btn-warning.btn-xs{
+  background-color: #337ab7;
+  border-color:#337ab7;
+}
+ 
+.done-true{
+  text-decoration: line-through;
+  color: grey;
+}
+ 
+.unstyled , .ng-binding, .check{
+    color: #286090; 
+}
